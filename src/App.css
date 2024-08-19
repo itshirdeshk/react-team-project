@@ -27,7 +27,7 @@ body {
     margin-bottom: 1rem;
   }
   
-  .todoP-input {
+  .todo-input {
     outline: none;
     background: none;
     border: 1px solid #8758ff;
@@ -42,12 +42,13 @@ body {
     color: #ffffff4d;
   }
   
-  .todoP-btn {
+  .todo-btn {
     background: #8758ff;
     color: #fff;
     border: none;
     padding: 0.55rem;
     cursor: pointer;
+    
   }
   
   .TodoP {
