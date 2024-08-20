@@ -10,7 +10,7 @@ body {
     text-align: center;
   }
   
-  h1 {
+  h1,h4{
     color: #fff;
     margin-bottom: 0.5rem;
     font-size: 1.75rem;
@@ -66,4 +66,12 @@ body {
     font-size: larger;
     
   }
+   
+  li {
+    color: #fff;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+  }
+
+
   

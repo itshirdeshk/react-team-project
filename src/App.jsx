@@ -1,7 +1,9 @@
 import React from 'react'
 import TodoWrapper from './components/TodoWrapper'
 import './App.css'
+
 const App = () => {
+  
   return (
     <div className="App">
      
@@ -10,4 +12,4 @@ const App = () => {
     </div>
   )
 }
-export default App
+export default App;
