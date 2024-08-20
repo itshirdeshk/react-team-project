@@ -1,39 +1,44 @@
-import { useState } from 'react';
-import React from 'react'
-
+import React, { useState } from 'react';
 
 const TodoForm = () => {
-  let [todos,setTodos] = useState(["assignment"]);
-  let [newTodo, setNewTodo] = useState("");
+  const [tasks, setTasks] = useState(["assignment"]);
+  const [newTask, setNewTask] = useState("");
   
-  let addNewTask = () => {
-   setTodos([...todos, newTodo]);
-   setNewTodo("");
+  const handleInputChange = (event) => {
+    setNewTask(event.target.value);
   };
 
-  let updateTodoValue = (event) => {
-    setNewTodo(event.target.value);
-    };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (newTask.trim()) {
+      setTasks([...tasks, newTask]);
+      setNewTask("");
+    }
+  };
 
   return (
     <div> 
-      <form className="TodoForm">
-    <input type="text"  className="todo-input" placeholder='What is the task today?' value={newTodo} onChange={updateTodoValue} />
-    <button type="submit" className='todo-btn' onClick={addNewTask}>Add Task</button>
-    <button className='todo-btn'>Clear</button>
-    <button className='todo-btn'>Update</button>
-  </form>
-  <hr></hr>
-  <h4>Tasks Todo</h4>
-  <ul>
-    { todos.map((todo) =>(
-   <li> {todo} </li>
-    ))
-      
-    }
-  </ul>
+      <form className="TodoForm" onSubmit={handleSubmit}>
+        <input 
+          type="text"  
+          className="todo-input" 
+          placeholder='What is the task today?' 
+          value={newTask} 
+          onChange={handleInputChange} 
+        />
+        <button type="submit" className='todo-btn'>Add Task</button>
+        <button type="button" className='todo-btn'>Clear</button>
+        <button type="button" className='todo-btn'>Update</button>
+      </form>
+      <hr />
+      <h4>Tasks Todo</h4>
+      <ul>
+        {tasks.map((task, index) => (
+          <li key={index}>{task}</li>
+        ))}
+      </ul>
     </div>
-  )
-}
+  );
+};
 
 export default TodoForm;
