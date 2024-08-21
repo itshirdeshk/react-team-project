@@ -3,13 +3,13 @@ import TodoP from "./TodoP";
 import TodoForm from "./TodoForm";
 const TodoWrapper = () => {
   return (
-      <>
+    <>
       <div className="Wrapper">
-      <h1>Get Things Done !</h1>
-      <TodoP /> 
-      <TodoForm />
+        <h1>Get Things Done !</h1>
+        <TodoP />
+        <TodoForm />
       </div>
-      </>
+    </>
   )
 }
 
